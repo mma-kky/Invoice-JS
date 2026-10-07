@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomor 2</title>
+
+    <style>
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <script>
+        var nama = "";
+        var nasiGoreng;
+        var esteh;
+        var roti;
+
+        let inputNama = prompt("Masukkan Nama Anda : ");
+        if(inputNama != null && inputNama != "") {
+            nama = inputNama;
+        }
+
+        let inputNasiGoreng = prompt("Masukkan Jumlah Nasi Goreng : ");
+        nasiGoreng = parseInt(inputNasiGoreng);
+
+        let inputEsteh = prompt("Masukkan Jumlah Es Teh : ");
+        esteh = parseInt(inputEsteh);
+
+        let inputRoti = prompt("Masukkan Jumlah Roti : ");
+        roti = parseInt(inputRoti);
+
+
+        var totalBelanja = (nasiGoreng * 15000) +
+                            (esteh * 5000) + 
+                            (roti * 7000);
+        
+        if(totalBelanja > 50000) {
+            var diskon = totalBelanja * 0.1;
+        } else {
+            var diskon = 0;
+        }
+
+        console.log("<h1>Hasil Penilaian Soal 2</h1>");
+        console.log("Nama : " + inputNama);
+        console.log("Jumlah Nasi Goreng : " + nasiGoreng);
+        console.log("Jumlah Es Teh : " + esteh);
+        console.log("Jumlah Roti : " + roti);
+        console.log("Total Belanja : " + totalBelanja);
+        console.log("Diskon : " + diskon);
+        console.log("Total Bayar : " + (totalBelanja - diskon));
+
+        document.write("<h1>Hasil Penilaian Soal 2</h1>");
+        document.write("<p>Nama : " + inputNama + "</p>");
+        document.write("<p>Jumlah Nasi Goreng : " + nasiGoreng + "</p>");
+        document.write("<p>Jumlah Es Teh : " + esteh + "</p>");
+        document.write("<p>Jumlah Roti : " + roti + "</p>");
+        document.write("<p>Total Belanja : " + totalBelanja + "</p>");
+        document.write("<p>Diskon : " + diskon + "</p>");
+        document.write("<p>Total Bayar : " + (totalBelanja - diskon) + "</p>");
+    </script>
+
+    <button class="no-print" type="button" onclick="window.print()">Print PDF</button>
+    
+    
+</body>
+</html>
